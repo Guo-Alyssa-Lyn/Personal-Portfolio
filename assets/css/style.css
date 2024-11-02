@@ -29,7 +29,7 @@
   --orange-soda: hsl(7, 85%, 55%);
   --space-cadet: hsl(261, 85%, 19%);
   --fiery-rose: hsl(353, 83%, 65%);
-  --klein-blue: hsl(239, 83%, 14%);
+  --klein-blue: hsl(239, 82%, 38%);
   --bluetiful: hsl(222, 88%, 55%);
   --glaucous: hsl(230, 79%, 59%);
   --manatee: hsl(252, 37%, 11%);
@@ -431,11 +431,13 @@ body {
 .portfolio-card .card-subtitle {
   color: var(--orange-soda);
   margin-block-end: 5px;
+  text-shadow: 1px 1px 2px black;
 }
 
 .portfolio-card .card-title {
   max-width: 20ch;
   margin-block-end: 20px;
+  text-shadow: 1px 1px 2px black, -1px -1px 2px rgb(0, 0, 0);
 }
 
 .portfolio-card .btn-link {
@@ -444,10 +446,11 @@ body {
   gap: 5px;
   font-size: var(--fs-6);
   text-transform: uppercase;
+  text-shadow: 1px 1px 2px black, -1px -1px 2px rgb(0, 0, 0);
 }
 
 .portfolio-card .btn-link ion-icon {
-  color: var(--orange-soda);
+  color: red;
   font-size: 1.6rem;
 }
 
@@ -494,6 +497,50 @@ body {
   height: 100%;
   border-radius: inherit;
 }
+
+
+
+
+
+/*-----------------------------------*\
+  #CERTIFICATES AND ACHIEVEMENTS
+\*-----------------------------------*/
+
+.container-card{
+  /* background-color: var(--midnight-blue);
+  margin-top: 30px;*/
+  /* box-shadow: 0 4px 8px rgb(31, 1, 49);
+  border-radius: var(--radius-5); */ 
+  padding: 50px 5px;
+  
+}
+
+.certificate-1{
+  height: 300px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgb(29, 2, 2);
+}
+
+.certificate-2{
+  height: 300px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgb(29, 2, 2);
+}
+
+.certificate-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+
+
+
+
+
+
 
 
 
@@ -734,6 +781,8 @@ textarea.contact-input {
 
   .portfolio-list li:nth-child(even) .card-content { margin-inline-start: 50%; }
 
+ 
+
 }
 
 
@@ -756,7 +805,20 @@ textarea.contact-input {
   }
 
   .portfolio-card:is(:hover, :focus) { background-size: 130%; }
+  
 
+
+   /**
+   * CERTIFICATIONS AND CERTIFICATE
+   */
+
+   
+
+   .certificate-list > li {
+    flex: 2 1 50%; /* Adjust width for larger screens to show two items per row */
+  }
+
+  
 
 
   /**
@@ -1023,6 +1085,20 @@ textarea.contact-input {
    */
 
   .skills-list { column-gap: 100px; }
+
+
+/**
+   * CERTIFICATIONS AND ACHIEVEMENT
+   */
+
+   .certificate-list{
+    justify-content: space-between;
+    padding-left: 60px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+
 
 
 
