@@ -507,19 +507,25 @@ body {
 \*-----------------------------------*/
 
 .container-card{
-  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   place-items: center;
   padding: 50px 5px;
   
 }
 
 .certificate-1{
+  display: block;
+  margin: 0 auto;
   height: 300px;
   width: 400px;
   box-shadow: 0 4px 8px rgb(29, 2, 2);
 }
 
 .certificate-2{
+  display: block;
+  margin: 0 auto;
   height: 300px;
   width: 400px;
   box-shadow: 0 4px 8px rgb(29, 2, 2);
