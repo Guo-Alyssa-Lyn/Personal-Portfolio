@@ -1093,7 +1093,6 @@ textarea.contact-input {
 
    .certificate-list{
     justify-content: space-between;
-    padding-left: 60px;
     display: flex;
     flex-direction: row;
     gap: 30px;
