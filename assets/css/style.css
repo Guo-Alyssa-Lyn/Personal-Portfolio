@@ -1092,8 +1092,9 @@ textarea.contact-input {
    */
 
    .certificate-list{
-    justify-content: space-between;
+    justify-content: center;
     display: flex;
+    align-items: center;
     flex-direction: row;
     gap: 30px;
   }
