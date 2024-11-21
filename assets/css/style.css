@@ -2,13 +2,6 @@
   #style.css
 \*-----------------------------------*/
 
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
 
 /*-----------------------------------*\
   #CUSTOM PROPERTY
@@ -20,22 +13,22 @@
    * colors
    */
 
-  --cadet-blue-crayola: hsl(240, 100%, 94%);
+  --cadet-blue-crayola: hsl(0, 8%, 80%);
   --gold-web-golden: hsl(256, 84%, 26%);
   --vivid-sky-blue: hsl(258, 84%, 63%);
-  --midnight-blue: hsl(250, 80%, 54%);
+  --midnight-blue: hsl(261, 100%, 48%);
   --minion-yellow: hsl(69, 85%, 48%);
-  --independence: hsl(258, 40%, 46%);
-  --orange-soda: hsl(7, 85%, 55%);
-  --space-cadet: hsl(261, 85%, 19%);
+  --independence: hsl(258, 100%, 60%);
+  --orange-soda: hsl(0, 100%, 53%);
+  --space-cadet:hsl(263, 100%, 25%);
   --fiery-rose: hsl(353, 83%, 65%);
-  --klein-blue: hsl(239, 82%, 38%);
+  --klein-blue: hsl(263, 100%, 46%);
   --bluetiful: hsl(222, 88%, 55%);
-  --glaucous: hsl(230, 79%, 59%);
-  --manatee: hsl(252, 37%, 11%);
+  --glaucous: hsl(298, 76%, 10%);
+  --manatee: hsl(251, 68%, 23%);
   --rufous: hsl(2, 85%, 35%);
-  --black: hsl(0, 0%, 0%);
-  --white: hsl(0, 100%, 92%);
+  --black: hsl(0, 28%, 13%);
+  --white: hsl(0, 100%, 95%);
 
   /**
    * typography
@@ -68,7 +61,7 @@
    * spacing
    */
 
-  --section-padding: 60px;
+  --section-padding: 100px;
 
   /**
    * shadow
@@ -251,7 +244,7 @@ body {
 }
 
 .logo {
-  color: var(--white);
+  color: var(--orange-soda);
   font-family: var(--ff-poppins);
   font-size: 2.4rem;
 }
@@ -306,67 +299,84 @@ body {
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
-
-.elem,
-.rotate-img { display: none; }
+/* Keyframes for the Slide In Animation */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100px); /* Start off-screen to the right */
+    opacity: 0; /* Fully transparent */
+  }
+  100% {
+    transform: translateX(0); /* End at the original position */
+    opacity: 1; /* Fully visible */
+  }
+}
 
 .hero {
   background-image: url("../images/hero-bg.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-block: 100px var(--section-padding);
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Flexbox for alignment */
+  justify-content: flex-end; /* Push content to the right */
+  align-items: center; /* Center vertically */
+  padding-right: 50px; /* Add spacing from the right edge */
+  padding-left: 50px; /* Ensure consistent inner spacing */
 }
-
-.hero-banner {
-  width: 150px;
-  height: 172px;
-  background-color: var(--independence);
-  border-radius: var(--radius-10);
-  margin-inline: auto;
-  margin-block-end: 30px;
-  margin-top: 50px;
-}
-
-.img-cover {
-  box-shadow: 0 4px 8px rgb(29, 2, 2);
-}
-
-.hero-banner img { border-radius: inherit; }
 
 .hero-content {
-  text-align: center;
-  color: var(--black);
+  display: flex; /* Flex layout for content */
+  flex-direction: column; /* Arrange items vertically */
+  align-items: flex-end; /* Align items to the right */
+  gap: 20px; /* Add spacing between elements */
+  text-align: right; /* Align text to the right */
+  color: black; /* Default text color */
+  margin-top: 40px;
+  margin-right: -5px;
+
+  /* Animation */
+  animation: slideInRight 1s ease-out; /* Apply the slide-in animation */
 }
 
-.hero-title {
-  font-family: var(--ff-barlow);
-  font-size: var(--fs-5);
-  font-weight: var(--fw-600);
-  line-height: 1.3;
-  margin-block-end: 14px;
+.title {
+  font-size: 3.5rem; /* Adjust title size */
+  line-height: 1.5;
+  font-weight: bold;
+  color: black; /* Keep text black */
 }
 
-.hero-title strong {
-  font-size: var(--fs-1);
-  font-weight: inherit;
-  margin-block-end: 8px;
+.hero-text {
+  font-size: 1.5rem; /* Adjust font size for readability */
+  line-height: 1.8;
+  color: black;
+  max-width: 600px; /* Optional: Limit text width for better readability */
 }
-
-.hero-text { margin-block-end: 25px; }
 
 .btn-group {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+  gap: 15px; /* Space between buttons */
+  justify-content: flex-end; /* Align buttons to the right */
 }
 
-.text-red { color: rgb(253, 43, 43); }
+.btn {
+  text-decoration: none; /* Remove underline */
+  padding: 10px 20px; /* Button padding */
+  border-radius: 20px; /* Rounded corners */
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #007BFF; /* Primary blue */
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
 
 
 
@@ -378,8 +388,32 @@ body {
   #ABOUT
 \*-----------------------------------*/
 
+/* Keyframes for Slide In from the Left */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100px); /* Start off-screen to the left */
+    opacity: 0; /* Fully transparent */
+  }
+  100% {
+    transform: translateX(0); /* End at the original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Keyframes for Slide In from the Right */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100px); /* Start off-screen to the right */
+    opacity: 0; /* Fully transparent */
+  }
+  100% {
+    transform: translateX(0); /* End at the original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
 .abs-img,
-.abs-icon { display: none; }
+.abs-icon { display: block; /* Ensures icons are visible */ }
 
 .about { padding-block-start: 120px; }
 
@@ -387,14 +421,18 @@ body {
   background-color: var(--independence);
   border-radius: var(--radius-10);
   margin-block-end: 30px;
+
+  /* Animation */
+  animation: slideInLeft 1s ease-out; /* Apply the animation */
 }
 
-.about-banner > .img-cover { border-radius: inherit; }
+.about-banner > .img-cover {  border-radius: inherit; }
 
 .about :is(.section-title, .section-subtitle, .section-text) { text-align: left; }
 
 .about :is(.section-title, .section-text) { margin-block-end: 30px; }
 
+.about-content { animation: slideInRight 1s ease-out; /* Apply the animation */ }
 
 
 
@@ -402,6 +440,50 @@ body {
 /*-----------------------------------*\
   #PORTFOLIO
 \*-----------------------------------*/
+
+/* Keyframes for Jump In from the Top */
+@keyframes jumpInTop {
+  0% {
+    transform: translateY(-100px); /* Start off-screen from the top */
+    opacity: 0; /* Fully transparent */
+  }
+  50% {
+    transform: translateY(10px); /* Slight bounce effect */
+    opacity: 0.7; /* Semi-transparent */
+  }
+  100% {
+    transform: translateY(0); /* End at the original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Keyframes for Jump In from the Top */
+@keyframes jumpInTop {
+  0% {
+    transform: translateY(-100px); /* Start off-screen from the top */
+    opacity: 0; /* Fully transparent */
+  }
+  50% {
+    transform: translateY(10px); /* Slight bounce effect */
+    opacity: 0.7; /* Semi-transparent */
+  }
+  100% {
+    transform: translateY(0); /* End at the original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Apply Jump In Animation to portfolio-list */
+.portfolio-list {
+  animation: jumpInTop 1s ease-out; /* Apply the animation */
+  animation-delay: 0.3s; /* Delay for a slight staggered effect */
+}
+
+/* Apply Jump In Animation to section-subtitle, section-title, and section-text */
+.section-subtitle, .section-title, .section-text {
+  animation: jumpInTop 1s ease-out; /* Apply the animation */
+  animation-delay: 0.3s; /* Delay for a slightly staggered effect */
+}
 
 .portfolio .section-title { margin-block-end: 18px; }
 
@@ -462,6 +544,45 @@ body {
   #SKILLS
 \*-----------------------------------*/
 
+/* Keyframes for Jump In from the Top */
+@keyframes jumpInTop {
+  0% {
+    transform: translateY(-100px); /* Start off-screen from the top */
+    opacity: 0; /* Fully transparent */
+  }
+  50% {
+    transform: translateY(10px); /* Slight bounce effect */
+    opacity: 0.7; /* Semi-transparent */
+  }
+  100% {
+    transform: translateY(0); /* End at the original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Keyframes for Fade In from the Top */
+@keyframes fadeInTop {
+  0% {
+    transform: translateY(-50px); /* Start off-screen from the top */
+    opacity: 0; /* Fully transparent */
+  }
+  100% {
+    transform: translateY(0); /* End at the original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Apply Jump In Animation to section-subtitle, section-title, and section-text */
+.section-subtitle, .section-title, .section-text {
+  animation: jumpInTop 1s ease-out; /* Apply the animation */
+  animation-delay: 0.3s; /* Delay for a slightly staggered effect */
+}
+
+/* Apply Fade In from the Top to skills-list */
+.skills-list {
+  animation: fadeInTop 1s ease-out; /* Apply the animation */
+}
+
 .skills .section-title { margin-block-end: 20px; }
 
 .skills .section-text { margin-block-end: 70px; }
@@ -505,6 +626,62 @@ body {
 /*-----------------------------------*\
   #CERTIFICATES AND ACHIEVEMENTS
 \*-----------------------------------*/
+
+/* Keyframes for Jump In from the Top */
+@keyframes jumpInTop {
+  0% {
+    transform: translateY(-100px); /* Start off-screen from the top */
+    opacity: 0; /* Fully transparent */
+  }
+  50% {
+    transform: translateY(10px); /* Slight bounce effect */
+    opacity: 0.7; /* Semi-transparent */
+  }
+  100% {
+    transform: translateY(0); /* End at the original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Keyframes for Slide In from the Left */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100px); /* Start off-screen to the left */
+    opacity: 0; /* Fully transparent */
+  }
+  100% {
+    transform: translateX(0); /* End at the original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Keyframes for Slide In from the Right */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100px); /* Start off-screen to the right */
+    opacity: 0; /* Fully transparent */
+  }
+  100% {
+    transform: translateX(0); /* End at the original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Apply Jump In Animation to section-subtitle and section-title */
+.section-subtitle, .section-title {
+  animation: jumpInTop 1s ease-out; /* Apply the animation */
+  animation-delay: 0.3s; /* Delay for a slightly staggered effect */
+}
+
+/* Apply Slide In from Left for certificate-1 */
+.certificate-1 {
+  animation: slideInLeft 1s ease-out; /* Apply the animation */
+}
+
+/* Apply Slide In from Right for certificate-2 */
+.certificate-2 {
+  animation: slideInRight 1s ease-out; /* Apply the animation */
+}
 
 .container-card{
   display: flex;
@@ -553,15 +730,38 @@ body {
   #CONTACT
 \*-----------------------------------*/
 
+/* Keyframes for Jump In from the Top */
+@keyframes jumpInTop {
+  0% {
+    transform: translateY(-100px); /* Start off-screen from the top */
+    opacity: 0; /* Fully transparent */
+  }
+  50% {
+    transform: translateY(10px); /* Slight bounce effect */
+    opacity: 0.7; /* Semi-transparent */
+  }
+  100% {
+    transform: translateY(0); /* End at the original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Apply Jump In Animation to contact-card */
+.contact-card {
+  animation: jumpInTop 1s ease-out; /* Apply the animation */
+  animation-delay: 0.3s; /* Delay for a slight staggered effect */
+}
+
 .contact-card {
   background-color: var(--midnight-blue);
   padding: 50px 25px;
   box-shadow: 0 4px 8px rgb(29, 2, 2);
   border-radius: var(--radius-20);
+  color: black;
 }
 
 .contact-card .card-subtitle {
-  color: var(--orange-soda);
+  color: white;
   font-family: var(--ff-barlow);
   font-size: var(--fs-4);
   font-weight: var(--fw-600);
@@ -570,6 +770,7 @@ body {
 .contact .section-title {
   text-align: left;
   margin-block-end: 30px;
+  color: black;
 }
 
 .contact-form { margin-block-end: 50px; }
@@ -605,8 +806,8 @@ textarea.contact-input {
 }
 
 .btn-submit:is(:hover, :focus) {
-  background-color: var(--white);
-  color: var(--black);
+  background-color: green;
+  color: white;
 }
 
 .contact-item {
@@ -618,14 +819,14 @@ textarea.contact-input {
 .contact-item:not(:last-child) { margin-block-end: 20px; }
 
 .contact-icon {
-  background-color: var(--glaucous);
+  background-color: brown;
   font-size: 2.4rem;
   padding: 20px;
   border-radius: 50%;
 }
 
 .contact-item-title {
-  color: var(--orange-soda);
+  color: white;
   font-family: var(--ff-barlow);
   font-size: var(--fs-4);
   font-weight: var(--fw-600);
@@ -695,9 +896,27 @@ textarea.contact-input {
   #FOOTER
 \*-----------------------------------*/
 
+/* Keyframes for Fade In from the Bottom */
+@keyframes fadeInBottom {
+  0% {
+    transform: translateY(50px); /* Start off-screen from the bottom */
+    opacity: 0; /* Fully transparent */
+  }
+  100% {
+    transform: translateY(0); /* End at the original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Apply Fade In from the Bottom to container */
+.container {
+  animation: fadeInBottom 1s ease-out; /* Apply the animation */
+}
+
 .footer {
   background-color: var(--independence);
   padding-block: 60px;
+  color: black;
 }
 
 .copyright {
@@ -712,7 +931,7 @@ textarea.contact-input {
   font-weight: var(--fw-600);
 }
 
-.copyright-link:is(:hover, :focus) { color: var(--white); }
+.copyright-link:is(:hover, :focus) { color: black; }
 
 .footer-list {
   max-width: max-content;
@@ -725,7 +944,7 @@ textarea.contact-input {
 
 .footer-link { transition: var(--transition-2); }
 
-.footer-link:is(:hover, :focus) { color: var(--white); }
+.footer-link:is(:hover, :focus) { color: black; }
 
 
 
@@ -920,98 +1139,29 @@ textarea.contact-input {
    * HERO
    */
 
-  .hero .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-  }
+  .hero-content {
+  display: flex; /* Flex layout for content */
+  flex-direction: column; /* Arrange items vertically */
+  align-items: flex-end; /* Align items to the right */
+  gap: 20px; /* Add spacing between elements */
+  text-align: right; /* Align text to the right */
+  color: black; /* Default text color */
+  margin-right: -300px;
+}
 
-  .hero-content { text-align: left; }
+.title {
+  font-size: 3.5rem; /* Adjust title size */
+  line-height: 1.5;
+  font-weight: bold;
+  color: black; /* Keep text black */
+}
 
-  .btn-group { justify-content: flex-start; }
-
-  .hero-title span { font-size: 3rem; }
-
-  .hero-title {
-    --fs-5: 2.2rem;
-    margin-block-end: 25px;
-  }
-
-  .hero-text {
-    margin-block-end: 25px;
-    font-size: var(--fs-5);
-  }
-
-  .hero-banner {
-    position: relative;
-    margin-block-end: 0;
-    order: 1;
-    width: 340px;
-    height: 390px;
-    margin-inline: 0;
-    margin-inline-start: auto;
-  }
-
-  .elem {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: var(--white);
-    border-radius: var(--radius-10);
-    padding: 20px;
-  }
-
-  .elem-1 {
-    top: 20px;
-    left: -130px;
-  }
-
-  .elem-1 .elem-title { color: var(--vivid-sky-blue); }
-
-  .elem-2 {
-    bottom: 30px;
-    right: -80px;
-  }
-
-  .elem-2 .elem-title { color: var(--fiery-rose); }
-
-  .elem-title {
-    font-size: 4.5rem;
-    line-height: 1.1;
-  }
-
-  .elem-text {
-    max-width: 10ch;
-    color: var(--black);
-    font-weight: var(--fw-700);
-    line-height: 1.1;
-  }
-
-  .elem-3 {
-    top: -40px;
-    right: -30px;
-  }
-
-  .elem-3 ion-icon {
-    color: var(--minion-yellow);
-    font-size: 6rem;
-  }
-
-  .rotate-img {
-    display: block;
-    position: absolute;
-    bottom: -60px;
-    left: -60px;
-    width: 120px;
-    animation: rotate360 15s linear infinite reverse;
-  }
-
-  @keyframes rotate360 {
-    0% { transform: rotate(0); }
-    100% { transform: rotate(1turn); }
-  }
-
+.hero-text {
+  font-size: 1.5rem; /* Adjust font size for readability */
+  line-height: 1.8;
+  color: black;
+  max-width: 600px; /* Optional: Limit text width for better readability */
+}
 
 
   /**
