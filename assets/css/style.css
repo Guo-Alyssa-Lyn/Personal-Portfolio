@@ -1215,6 +1215,7 @@ textarea.contact-input {
 
 .title {
   font-size: 3.8rem; /* Adjust title size */
+  text-align: right;
   line-height: 1.5;
   font-weight: bold;
   color: black; /* Keep text black */
@@ -1222,6 +1223,7 @@ textarea.contact-input {
 
 .hero-text {
   font-size: 1.5rem; /* Adjust font size for readability */
+  text-align: right;
   line-height: 1.8;
   color: black;
   max-width: 600px; /* Optional: Limit text width for better readability */
