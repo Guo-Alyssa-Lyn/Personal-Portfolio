@@ -352,7 +352,7 @@ body {
 }
 
 .title {
-  font-size: 6rem; /* Increased title size */
+  font-size: 4rem; /* Increased title size */
   text-align: right;
   line-height: 1.5;
   font-weight: bold;
@@ -360,7 +360,7 @@ body {
 }
 
 .hero-text {
-  font-size: 1.8rem; /* Increased font size for readability */
+  font-size: 1.0rem; /* Increased font size for readability */
   text-align: right;
   line-height: 2; /* Adjusted for better spacing */
   color: black;
@@ -377,7 +377,7 @@ body {
   text-decoration: none; /* Remove underline */
   padding: 7px 20px; /* Button padding */
   border-radius: 25px; /* Rounded corners */
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -449,7 +449,7 @@ body {
 
 
  .abs-img,
-.abs-icon { display: block; /* Ensures icons are visible */ }  
+.abs-icon { display: none; }  
 
 .about { padding-block-start: 10px; }
 
@@ -1216,7 +1216,7 @@ textarea.contact-input {
 }
 
 .title {
-  font-size: 3.8rem; /* Adjust title size */
+  font-size: 4.2rem; /* Adjust title size */
   text-align: right;
   line-height: 1.5;
   font-weight: bold;
@@ -1224,7 +1224,7 @@ textarea.contact-input {
 }
 
 .hero-text {
-  font-size: 1.5rem; /* Adjust font size for readability */
+  font-size: 1.8rem; /* Adjust font size for readability */
   text-align: right;
   line-height: 1.8;
   color: black;
