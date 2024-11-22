@@ -352,15 +352,17 @@ body {
 }
 
 .title {
-  font-size: 3.5rem; /* Adjust title size */
+  font-size: 6rem; /* Increased title size */
+  text-align: right;
   line-height: 1.5;
   font-weight: bold;
   color: black; /* Keep text black */
 }
 
 .hero-text {
-  font-size: 1.7rem; /* Adjust font size for readability */
-  line-height: 1.8;
+  font-size: 1.8rem; /* Increased font size for readability */
+  text-align: right;
+  line-height: 2; /* Adjusted for better spacing */
   color: black;
   max-width: 600px; /* Optional: Limit text width for better readability */
 }
@@ -444,8 +446,8 @@ body {
 }
 
 
-/* .abs-img,
-.abs-icon { display: block; /* Ensures icons are visible */ } */
+.abs-img,
+.abs-icon { display: block; /* Ensures icons are visible */ } 
 
 .about { padding-block-start: 10px; }
 
@@ -1212,7 +1214,7 @@ textarea.contact-input {
 }
 
 .title {
-  font-size: 3.5rem; /* Adjust title size */
+  font-size: 3.8rem; /* Adjust title size */
   line-height: 1.5;
   font-weight: bold;
   color: black; /* Keep text black */
