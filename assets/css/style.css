@@ -375,9 +375,9 @@ body {
 
 .btn {
   text-decoration: none; /* Remove underline */
-  padding: 10px 20px; /* Button padding */
+  padding: 7px 20px; /* Button padding */
   border-radius: 25px; /* Rounded corners */
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -428,6 +428,8 @@ body {
   }
 }
 
+#about { margin-top: 90px; }
+
 /* Initial state: hidden */
 .about-banner,
 .about-content {
@@ -446,8 +448,8 @@ body {
 }
 
 
-.abs-img,
-.abs-icon { display: block; /* Ensures icons are visible */ } 
+ .abs-img,
+.abs-icon { display: block; /* Ensures icons are visible */ }  
 
 .about { padding-block-start: 10px; }
 
@@ -1234,7 +1236,7 @@ textarea.contact-input {
    * ABOUT
    */
 
-  .about { padding-block: 180px; }
+  .about { padding-block: 60px; }
 
   .about .container {
     display: grid;
