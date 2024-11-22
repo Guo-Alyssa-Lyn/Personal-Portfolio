@@ -27,6 +27,110 @@ for (let i = 0; i < navbarLinks.length; i++) {
   });
 }
 
+/**
+ * Hero section animation
+ */
+
+// Function to trigger animation
+function triggerAnimation() {
+  const heroContent = document.querySelector(".hero-content");
+  
+  // Ensure the animation class is added
+  heroContent.classList.add("show");
+}
+
+// Trigger animation on page load
+window.addEventListener('load', function() {
+  triggerAnimation();
+});
+
+// Trigger animation when the "Home" link is clicked
+document.getElementById("home-link").addEventListener("click", function(event) {
+  event.preventDefault();  // Prevent the default link action (scrolling)
+
+  // Re-trigger the animation by removing and adding the class
+  const heroContent = document.querySelector(".hero-content");
+  heroContent.classList.remove("show");  // Remove the animation class first
+  void heroContent.offsetWidth;  // Trigger reflow to reset the animation
+  heroContent.classList.add("show");  // Add the animation class again
+
+  // Optionally, scroll to the home section
+  document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+});
+
+
+
+
+
+
+
+/**
+ * About section animation
+ */
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Select elements for the About section
+  const aboutLink = document.getElementById("about-link");
+  const aboutBanner = document.querySelector(".about-banner");
+  const aboutContent = document.querySelector(".about-content");
+  const aboutSection = document.getElementById("about");
+
+  // Function to add animation classes
+  function triggerAboutAnimation() {
+    aboutBanner.classList.add("show");
+    aboutContent.classList.add("show");
+  }
+
+  // Trigger animation on page load if the About section is in view
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          triggerAboutAnimation();
+        }
+      });
+    },
+    { threshold: 0.5 } // Trigger when 50% of the section is visible
+  );
+
+  observer.observe(aboutSection);
+
+  // Handle "About" link click
+  aboutLink.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    // Smoothly scroll to the About section
+    aboutSection.scrollIntoView({ behavior: "smooth" });
+
+    // Re-trigger animation
+    aboutBanner.classList.remove("show");
+    aboutContent.classList.remove("show");
+
+    // Force a reflow to reset the animation
+    void aboutBanner.offsetWidth;
+    void aboutContent.offsetWidth;
+
+    // Re-add the "show" class
+    triggerAboutAnimation();
+  });
+});
+
+
+
+
+
+
+
+
+/**
+ * Portfolio section animation
+ */
+
+
+
+
+
+
 
 
 

@@ -299,6 +299,7 @@ body {
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
+
 /* Keyframes for the Slide In Animation */
 @keyframes slideInRight {
   0% {
@@ -332,9 +333,13 @@ body {
   color: black; /* Default text color */
   margin-top: 40px;
   margin-right: -5px;
+  opacity: 0; /* Initially hide the content */
+}
 
-  /* Animation */
-  animation: slideInRight 1s ease-out; /* Apply the slide-in animation */
+/* Add this class to trigger the animation */
+.hero-content.show {
+  animation: slideInRight 1s ease-out forwards; /* Apply the slide-in animation */
+  opacity: 1; /* Make it visible when animation starts */
 }
 
 .title {
@@ -345,7 +350,7 @@ body {
 }
 
 .hero-text {
-  font-size: 1.5rem; /* Adjust font size for readability */
+  font-size: 1.7rem; /* Adjust font size for readability */
   line-height: 1.8;
   color: black;
   max-width: 600px; /* Optional: Limit text width for better readability */
@@ -360,8 +365,8 @@ body {
 .btn {
   text-decoration: none; /* Remove underline */
   padding: 10px 20px; /* Button padding */
-  border-radius: 20px; /* Rounded corners */
-  font-size: 1rem;
+  border-radius: 25px; /* Rounded corners */
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -391,26 +396,44 @@ body {
 /* Keyframes for Slide In from the Left */
 @keyframes slideInLeft {
   0% {
-    transform: translateX(-100px); /* Start off-screen to the left */
-    opacity: 0; /* Fully transparent */
+    transform: translateX(-100px);
+    opacity: 0;
   }
   100% {
-    transform: translateX(0); /* End at the original position */
-    opacity: 1; /* Fully visible */
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
 /* Keyframes for Slide In from the Right */
 @keyframes slideInRight {
   0% {
-    transform: translateX(100px); /* Start off-screen to the right */
-    opacity: 0; /* Fully transparent */
+    transform: translateX(100px);
+    opacity: 0;
   }
   100% {
-    transform: translateX(0); /* End at the original position */
-    opacity: 1; /* Fully visible */
+    transform: translateX(0);
+    opacity: 1;
   }
 }
+
+/* Initial state: hidden */
+.about-banner,
+.about-content {
+  opacity: 0;
+  transform: translateX(-100px); /* Default off-screen position */
+  will-change: transform, opacity;
+}
+
+/* Classes to trigger animation */
+.about-banner.show {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.about-content.show {
+  animation: slideInRight 1s ease-out forwards;
+}
+
 
 .abs-img,
 .abs-icon { display: block; /* Ensures icons are visible */ }
