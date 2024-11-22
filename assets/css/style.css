@@ -134,7 +134,7 @@ textarea { width: 100%; }
 address { font-style: normal; }
 
 html {
-  font-size: 10px;
+  font-size: 62.5%; /* 1rem = 10px for scaling */
   font-family: var(--ff-open-sans);
   scroll-behavior: smooth;
 }
@@ -165,7 +165,12 @@ body {
   #REUSED STYLE
 \*-----------------------------------*/
 
-.container { padding-inline: 20px; }
+.container {
+  width: 100%;
+  max-width: 1200px; /* Increased max-width */
+  margin: 0 auto;
+  padding: 0 1rem; /* Ensure padding for small screens */
+}
 
 .btn {
   color: var(--white);
@@ -318,10 +323,9 @@ body {
   background-position: center;
   height: 100vh; /* Full viewport height */
   display: flex; /* Flexbox for alignment */
-  justify-content: flex-end; /* Push content to the right */
+  justify-content: flex-end; /* Align content to the right */
   align-items: center; /* Center vertically */
-  padding-right: 50px; /* Add spacing from the right edge */
-  padding-left: 50px; /* Ensure consistent inner spacing */
+  padding: 0 20px; /* Consistent padding for small screens */
 }
 
 .hero-content {
@@ -332,9 +336,11 @@ body {
   text-align: right; /* Align text to the right */
   color: black; /* Default text color */
   margin-top: 40px;
-  margin-right: -5px;
+  margin-right: 0; /* Adjusted to push further right */
+  max-width: 800px; /* Limit content width for better readability */
   opacity: 0; /* Initially hide the content */
 }
+
 
 /* Add this class to trigger the animation */
 .hero-content.show {
@@ -1018,7 +1024,21 @@ textarea.contact-input {
  * responsive for larger than 600px screen
  */
 
-@media (min-width: 600px) {
+
+    @media (max-width: 600px) {
+      .hero-content {
+        text-align: center; /* Adjust alignment */
+      }
+      .title {
+        font-size: 2.4rem; /* Reduce size */
+      }
+      .hero-text {
+        font-size: 1.4rem; /* Ensure readability */
+      }
+    }
+    
+    @media (min-width: 600px) {
+    
 
   /**
    * PORTFOLIO
@@ -1169,7 +1189,7 @@ textarea.contact-input {
   gap: 20px; /* Add spacing between elements */
   text-align: right; /* Align text to the right */
   color: black; /* Default text color */
-  margin-right: -300px;
+  margin-left: 200px;
 }
 
 .title {
