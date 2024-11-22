@@ -252,6 +252,9 @@ body {
   color: var(--orange-soda);
   font-family: var(--ff-poppins);
   font-size: 2.4rem;
+  text-align: center; /* This centers the text inside the logo itself */
+  margin: 0 auto; /* Ensures margin for centering */
+  display: inline-block; /* Ensure it's an inline-block element to center it */
 }
 
 .nav-toggle-btn { font-size: 3rem; }
@@ -441,10 +444,10 @@ body {
 }
 
 
-.abs-img,
-.abs-icon { display: block; /* Ensures icons are visible */ }
+/* .abs-img,
+.abs-icon { display: block; /* Ensures icons are visible */ } */
 
-.about { padding-block-start: 120px; }
+.about { padding-block-start: 10px; }
 
 .about-banner {
   background-color: var(--independence);
@@ -1144,37 +1147,53 @@ textarea.contact-input {
 
 
   /**
-   * HEADER
-   */
+ * HEADER
+ */
 
-  .nav-toggle-btn { display: none; }
+.nav-toggle-btn {
+  display: none;
+}
 
-  .header,
-  .header.nav-active {
-    background-color: transparent;
-    box-shadow: none;
-    height: unset;
-    padding-block: 30px;
-  }
+.header,
+.header.nav-active {
+  background-color: transparent;
+  box-shadow: none;
+  height: unset;
+  padding-block: 30px;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
 
-  .header.active {
-    background-color: var(--space-cadet);
-    box-shadow: var(--shadow);
-    padding-block: 20px;
-  }
+.header.active {
+  background-color: var(--space-cadet);
+  box-shadow: var(--shadow);
+  padding-block: 20px;
+}
 
-  .navbar { all: unset; }
+.navbar {
+  all: unset;
+  display: flex; /* Allow navbar to behave as a flex container */
+  justify-content: center; /* Center the navbar content horizontally */
+}
 
-  .navbar-list {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-  }
+.navbar-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
 
-  .navbar .btn {
-    margin-block-start: 0;
-    --padding: 7px 30px;
-  }
+.navbar .btn {
+  margin-block-start: 0;
+  --padding: 7px 30px;
+}
+
+
+
+
+
+
+
 
 
 
@@ -1263,6 +1282,13 @@ textarea.contact-input {
     left: 250px;
     background-color: var(--rufous);
   }
+
+  .abs-img,
+  .abs-icon { display: block; /* Ensures icons are visible */ }
+
+  
+
+
 
 
 
