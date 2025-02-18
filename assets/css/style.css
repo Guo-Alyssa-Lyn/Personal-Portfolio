@@ -727,6 +727,9 @@ body {
   align-items: center;
   place-items: center;
   padding: 50px 5px;
+
+  flex-direction: column;
+  gap: 40px;
   
 }
 
@@ -746,12 +749,12 @@ body {
   box-shadow: 0 4px 8px rgb(29, 2, 2);
 }
 
-.certificate-list {
+/* .certificate-list {
   display: flex;
   flex-direction: column;
   gap: 40px;
   
-}
+} */
 
 
 
@@ -982,8 +985,10 @@ textarea.contact-input {
 
 .footer-link { transition: var(--transition-2); }
 
-.footer-link:is(:hover, :focus) { color: black; }
 
+i .fa-brands {
+  color: var(--glaucous);
+}
 
 
 
