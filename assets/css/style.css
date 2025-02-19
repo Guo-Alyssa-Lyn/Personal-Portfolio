@@ -351,12 +351,25 @@ body {
   opacity: 1; /* Make it visible when animation starts */
 }
 
-.title {
-  font-size: 7rem; /* Increased title size */
+.title span {
+  font-size: 6rem; /* Increased title size */
   text-align: center;
   line-height: 1.5;
   font-weight: bold;
   color: black; /* Keep text black */
+
+  font-family: "Dosis", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.title p {
+  font-size: 20px;
+  font-family: "Dosis", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
 }
 
 .btn-group {
@@ -383,8 +396,15 @@ body {
   background-color: #0056b3; /* Darker blue on hover */
 }
 
+.logo{
+  display: flex; 
+  font-size: 25px;
+}
 
-
+.img-logo{
+  width: 40px; 
+  height: 40px;
+}
 
 
 
@@ -1232,13 +1252,32 @@ i .fa-brands {
   margin-left: 150px;
 }
 
-.title {
-  font-size: 8rem; /* Adjust title size */
+.title span{
+  font-size: 10rem; /* Adjust title size */
   text-align: center;
   line-height: 1.5;
   font-weight: bold;
   color: black; /* Keep text black */
+
+  font-family: "Dosis", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
 }
+
+.img-logo{
+  width: 50px; 
+  height: 50px;
+}
+
+.title p {
+  font-size: 30px;
+  font-family: "Dosis", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
 
 
 
