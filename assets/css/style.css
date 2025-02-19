@@ -352,7 +352,7 @@ body {
 }
 
 .title span {
-  font-size: 6rem; /* Increased title size */
+  font-size: 5rem; /* Increased title size */
   text-align: center;
   line-height: 1.5;
   font-weight: bold;
