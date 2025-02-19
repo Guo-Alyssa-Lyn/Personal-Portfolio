@@ -334,9 +334,9 @@ body {
 .hero-content {
   display: flex; /* Flex layout for content */
   flex-direction: column; /* Arrange items vertically */
-  align-items: flex-end; /* Align items to the right */
+  align-items: center; /* Align items to the right */
   gap: 20px; /* Add spacing between elements */
-  text-align: right; /* Align text to the right */
+  text-align: center; /* Align text to the right */
   color: black; /* Default text color */
   margin-top: 40px;
   margin-right: 0; /* Adjusted to push further right */
@@ -352,25 +352,17 @@ body {
 }
 
 .title {
-  font-size: 4rem; /* Increased title size */
-  text-align: right;
+  font-size: 7rem; /* Increased title size */
+  text-align: center;
   line-height: 1.5;
   font-weight: bold;
   color: black; /* Keep text black */
 }
 
-.hero-text {
-  font-size: 1.0rem; /* Increased font size for readability */
-  text-align: right;
-  line-height: 2; /* Adjusted for better spacing */
-  color: black;
-  max-width: 600px; /* Optional: Limit text width for better readability */
-}
-
 .btn-group {
   display: flex;
   gap: 15px; /* Space between buttons */
-  justify-content: flex-end; /* Align buttons to the right */
+  justify-content: flex-start; /* Align buttons to the right */
 }
 
 .btn {
@@ -390,6 +382,7 @@ body {
 .btn-primary:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
+
 
 
 
@@ -721,40 +714,57 @@ body {
   animation: slideInRight 1s ease-out; /* Apply the animation */
 }
 
-.container-card{
+/* Apply Slide In from Left for certificate-1 */
+.certificate-3 {
+  animation: slideInLeft 1s ease-out; /* Apply the animation */
+}
+
+/* Apply Slide In from Right for certificate-2 */
+.certificate-4 {
+  animation: slideInRight 1s ease-out; /* Apply the animation */
+}
+
+.container-card li{
   display: flex;
   justify-content: center;
   align-items: center;
   place-items: center;
-  padding: 50px 5px;
+  padding: 20px 5px;
 
   flex-direction: column;
-  gap: 40px;
-  
+  margin-top: 20px;
 }
+
 
 .certificate-1{
   display: block;
-  margin: 0 auto;
   height: 300px;
   width: 400px;
   box-shadow: 0 4px 8px rgb(29, 2, 2);
 }
 
 .certificate-2{
-  display: block;
-  margin: 0 auto;
   height: 300px;
   width: 400px;
   box-shadow: 0 4px 8px rgb(29, 2, 2);
 }
 
-/* .certificate-list {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  
-} */
+.certificate-3{
+  display: block;
+ 
+  height: 300px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgb(29, 2, 2);
+}
+
+.certificate-4{
+  display: block;
+ 
+  height: 300px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgb(29, 2, 2);
+}
+
 
 
 
@@ -1215,28 +1225,23 @@ i .fa-brands {
   .hero-content {
   display: flex; /* Flex layout for content */
   flex-direction: column; /* Arrange items vertically */
-  align-items: flex-end; /* Align items to the right */
+  align-items: center; /* Align items to the right */
   gap: 20px; /* Add spacing between elements */
-  text-align: right; /* Align text to the right */
+  text-align: center; /* Align text to the right */
   color: black; /* Default text color */
-  margin-left: 200px;
+  margin-left: 150px;
 }
 
 .title {
-  font-size: 4.2rem; /* Adjust title size */
-  text-align: right;
+  font-size: 8rem; /* Adjust title size */
+  text-align: center;
   line-height: 1.5;
   font-weight: bold;
   color: black; /* Keep text black */
 }
 
-.hero-text {
-  font-size: 1.8rem; /* Adjust font size for readability */
-  text-align: right;
-  line-height: 1.8;
-  color: black;
-  max-width: 600px; /* Optional: Limit text width for better readability */
-}
+
+
 
 
   /**
@@ -1331,7 +1336,7 @@ i .fa-brands {
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 30px;
+    margin-top: 20px;
   }
 
 
