@@ -676,6 +676,51 @@ body {
 
 
 /*-----------------------------------*\
+  #OTHERSKILLS
+\*-----------------------------------*/
+
+.custom-horizontal-line {
+  border: 1px solid var(--orange-soda);
+  margin: 0 auto;
+  width: 20%;
+}
+
+#other-skills-p {
+  margin-top: 10px;
+}
+
+.card-box-container i {
+  padding: 20px 50px;
+  color: var(--orange-soda);
+}
+
+.card-box-container {
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
+  width: 250px;
+  padding: 30px 40px;
+}
+
+.card-box-container p{
+  margin-top: 10px;
+}
+
+.other-skills-list{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+
+
+
+
+
+
+/*-----------------------------------*\
   #CERTIFICATES AND ACHIEVEMENTS
 \*-----------------------------------*/
 
@@ -814,7 +859,7 @@ body {
 .fa-solid {
   color: var(--orange-soda);
   padding: 15px 30px;
-  margin-right: 30px;
+  margin-right: 10px;
 }
 
 .message-container-card{
@@ -1344,10 +1389,19 @@ i .fa-brands {
 
 
   /**
-   * SKILLS
+   * SKILLS & OTHERSKILLS
    */
 
   .skills-list { column-gap: 100px; }
+
+  .other-skills-list{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+  }
 
 
 /**
@@ -1361,6 +1415,47 @@ i .fa-brands {
     flex-direction: row;
     margin-top: 20px;
   }
+
+
+
+
+
+
+
+  /**
+   * COLLABORATION MESSAGE
+   */
+
+#collab{
+  padding-top: 170px;
+}
+
+.message{
+  font-size: 38px;
+  font-family: var(--ff-open-sans);
+}
+
+.message-group p{
+  margin-top: 10px;
+  opacity: 0.6;
+}
+
+.fa-solid {
+  color: var(--orange-soda);
+  padding: 15px 30px;
+  margin-right: 30px;
+}
+
+.message-container-card{
+  display: flex;
+  border-radius: 15px;
+  padding: 50px 40px;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.message-group a{
+  margin-top: 20px;
+}
 
 
 
