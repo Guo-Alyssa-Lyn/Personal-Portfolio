@@ -793,6 +793,40 @@ body {
 
 
 
+/*-----------------------------------*\
+  #COLLABORATION MESSAGE
+\*-----------------------------------*/
+
+#collab{
+  padding-top: 170px;
+}
+
+.message{
+  font-size: 38px;
+  font-family: var(--ff-open-sans);
+}
+
+.message-group p{
+  margin-top: 10px;
+  opacity: 0.6;
+}
+
+.fa-solid {
+  color: var(--orange-soda);
+  padding: 15px 30px;
+  margin-right: 30px;
+}
+
+.message-container-card{
+  display: flex;
+  border-radius: 15px;
+  padding: 50px 40px;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.message-group a{
+  margin-top: 20px;
+}
 
 
 
