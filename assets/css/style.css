@@ -487,6 +487,36 @@ body {
 
 
 
+
+
+
+/*-----------------------------------*\
+  #ATTENDEDSCHOOLS
+\*-----------------------------------*/
+
+.school-logos{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 50px;
+  margin-left: 200px;
+}
+
+.school-01{
+  border-radius: 100%;
+}
+
+.school-02{
+  border-radius: 100%;
+}
+
+
+
+
+
+
 /*-----------------------------------*\
   #NEWPORTFOLIO
 \*-----------------------------------*/
